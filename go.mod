@@ -4,9 +4,11 @@ go 1.19
 
 require (
 	github.com/google/uuid v1.3.0
+	github.com/google/wire v0.5.0
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.15.2
 	github.com/ilyakaznacheev/cleanenv v1.4.2
-	github.com/samber/lo v1.38.1
+	github.com/pkg/errors v0.9.1
+	github.com/samber/lo v1.33.0
 	github.com/stretchr/testify v1.8.1
 	go.uber.org/automaxprocs v1.5.2
 	golang.org/x/exp v0.0.0-20230321023759-10a507213a29
