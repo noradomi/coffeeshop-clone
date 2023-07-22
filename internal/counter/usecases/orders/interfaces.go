@@ -5,6 +5,7 @@ import (
 
 	"github.com/google/uuid"
 	"github.com/noradomi/coffeeshop-clone/internal/counter/domain"
+	"github.com/noradomi/coffeeshop-clone/pkg/rabbitmq/publisher"
 )
 
 type (
@@ -13,6 +14,16 @@ type (
 		GetByID(context.Context, uuid.UUID) (*domain.Order, error)
 		Create(context.Context, *domain.Order) error
 		Update(context.Context, *domain.Order) (*domain.Order, error)
+	}
+
+	BaristaEventPublisher interface {
+		Configure(...publisher.Option)
+		Publish(context.Context, []byte, string) error
+	}
+
+	KitchenEventPublisher interface {
+		Configure(...publisher.Option)
+		Publish(context.Context, []byte, string) error
 	}
 
 	UseCase interface {
