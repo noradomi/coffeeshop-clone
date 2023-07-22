@@ -8,6 +8,7 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.15.2
 	github.com/ilyakaznacheev/cleanenv v1.4.2
 	github.com/pkg/errors v0.9.1
+	github.com/rabbitmq/amqp091-go v1.8.1
 	github.com/samber/lo v1.33.0
 	github.com/stretchr/testify v1.8.1
 	go.uber.org/automaxprocs v1.5.2
